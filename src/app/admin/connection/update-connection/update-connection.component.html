@@ -1,0 +1,29 @@
+<!-- updating the connection details-->
+<div>
+    <table>
+      <thead>
+        <tr>
+          <th>Consumer Number</th>
+          <th>Application Date</th>
+          <th>Connection Type</th>
+          <th>Phase Type</th>
+          <th>Connection Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let connection of inactiveConnections">
+          <td>{{ connection.consumerNumber }}</td>
+          <td>{{ connection.applicationDate }}</td>
+          <td>{{ connection.connectionType }}</td>
+          <td>{{ connection.phaseType }}</td>
+          <td>{{ connection.connectionStatus }}</td>
+          <!-- Display other connection details as needed -->
+          <td>
+            <button (click)="approveConnection(connection)">Approve</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

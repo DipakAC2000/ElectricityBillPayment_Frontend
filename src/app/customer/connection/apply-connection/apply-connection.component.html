@@ -1,0 +1,62 @@
+<!-- addcustomer.component.html -->
+
+<div class="container">
+    <h2>Apply Connection</h2>
+    <form [formGroup]="applyConnectionForm" (ngSubmit)="onSubmit(applyConnectionForm.value)">
+      <!-- Connection Fields -->
+      <div class="mb-3">
+        <label for="connectionType" class="form-label">Connection Type</label>
+        <select class="form-select" id="connectionType" formControlName="connectionType" required>
+          <option value="" disabled selected>Select</option>
+          <option value=0>NON_INDUSTRIAL</option>
+          <option value=1>INDUSTRIAL</option>
+          <option value=2>AGRICULTURAL</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="phaseType" class="form-label">Phase Type</label>
+        <select class="form-select" id="phaseType" formControlName="phaseType" required>
+          <option value="" disabled selected>Select</option>
+          <option value=0>SINGLE_PHASE</option>
+          <option value=1>THREE_PHASE</option>
+        </select>
+      </div>
+      
+  
+      <!-- User Fields -->
+      <div class="mb-3">
+        <label for="flatOrHouseNumber" class="form-label">Flat/HouseNumber</label>
+        <input type="number" class="form-control" id="flatOrHouseNumber" formControlName="flatOrHouseNumber" required>
+      </div>
+      <div class="mb-3">
+        <label for="buidingName" class="form-label">Buiding Name</label>
+        <input type="text" class="form-control" id="buidingName" formControlName="buidingName" required>
+      </div>
+      <div class="mb-3">
+        <label for="village" class="form-label">Village</label>
+        <input type="text" class="form-control" id="village" formControlName="village" required>
+      </div>
+      <div class="mb-3">
+        <label for="taluka" class="form-label">Taluka</label>
+        <input type="text" class="form-control" id="taluka" formControlName="taluka" required>
+      </div>
+      <div class="mb-3">
+        <label for="district" class="form-label">District</label>
+        <input type="district" class="form-control" id="district" formControlName="district" required>
+      </div>
+      <div class="mb-3">
+        <label for="state" class="form-label">State</label>
+        <input type="text" class="form-control" id="state" formControlName="state" required>
+      </div>
+      <div class="mb-3">
+        <label for="pincode" class="form-label">Pin Code</label>
+        <input type="number" class="form-control" id="pincode" formControlName="pincode" required>
+      </div>
+      <div class="mb-3">
+        <label for="landmark" class="form-label">Landmark</label>
+        <input type="text" class="form-control" id="landmark" formControlName="landmark" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

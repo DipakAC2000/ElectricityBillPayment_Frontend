@@ -1,0 +1,59 @@
+<!-- addcustomer.component.html -->
+
+<div class="container">
+    <h2>Add Customer</h2>
+    <form [formGroup]="addCustomerForm" (ngSubmit)="onSubmit(addCustomerForm.value)">
+      <!-- Customer Fields -->
+      <div class="mb-3">
+        <label for="aadhaarNumber" class="form-label">Aadhaar Number</label>
+        <input type="number" class="form-control" id="aadhaarNumber" formControlName="aadhaarNumber" required>
+      </div>
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+      </div>
+      <div class="mb-3">
+        <label for="middleName" class="form-label">Middle Name</label>
+        <input type="text" class="form-control" id="middleName" formControlName="middleName">
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
+      </div>
+      <div class="mb-3">
+        <label for="gender" class="form-label">Gender</label>
+        <select class="form-select" id="gender" formControlName="gender" required>
+          <option value="" disabled selected>Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="mobileNumber" class="form-label">Mobile Number</label>
+        <input type="number" class="form-control" id="mobileNumber" formControlName="mobileNumber" required>
+      </div>
+  
+      <!-- User Fields -->
+      <div class="mb-3">
+        <label for="userName" class="form-label">Username</label>
+        <input type="text" class="form-control" id="userName" formControlName="userName" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password" required>
+      </div>
+      <div class="mb-3">
+        <label for="userType" class="form-label">User Type</label>
+        <select class="form-select" id="userType" formControlName="userType" required>
+          <option value="customer" selected>CUSTOMER</option>
+          <option value="admin">ADMIN</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
